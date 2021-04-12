@@ -1,0 +1,53 @@
+#include<stdio.h>
+
+int main()
+{
+  int matrix[3][3];
+  int matrix2[3][3];
+  int matrix3[3][3];
+  int row,column;
+  row=0;column=0;
+  for(row=0;row<3; row++)
+  {
+      for(column=0; column<3; column++)
+      {
+          printf("/enter value for matrix %d , %d",row,column);
+          scanf("%d",&matrix[row][column]);
+      }
+
+  }
+
+    for(row=0;row<3; row++)
+  {
+      for(column=0; column<3; column++)
+      {
+          printf("/enter value for matrix2 %d , %d",row,column);
+          scanf("%d",&matrix2[row][column]);
+          for(row=0; row<3; row++)
+          {
+              for(column=0; column<3; column++)
+              {
+                  matrix3[row][column]= (matrix[row][column] * matrix2[row][column]);
+                  printf("/enter value multiple matrix[row][column] , matrix2[row][column]");
+                  scanf("%d",&matrix3[row][column]);
+              }
+          }
+
+      }
+
+  }
+
+
+    for(row=0;row<3; row++)
+  {
+      for(column=0; column<3; column++)
+      {
+            matrix3[row][column]=matrix[row][column]+matrix2[row][column];
+            printf(" %d ",matrix3[row][column]);
+      }
+
+  }
+  return 0;
+
+
+}
